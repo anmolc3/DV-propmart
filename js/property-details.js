@@ -1,6 +1,6 @@
 /**
- * DV PropMart — Property Details Dynamic Renderer
- * Reads property ID from URL parameter (e.g., property-details.html?id=DVPM001),
+ * KV PropMart — Property Details Dynamic Renderer
+ * Reads property ID from URL parameter (e.g., property-details.html?id=KVPM001),
  * injects all specs, images, amenities, interactive gallery switcher,
  * sticky lead generator, WhatsApp link, and related property listings.
  */
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initPropertyDetails() {
   const urlParams = new URLSearchParams(window.location.search);
-  const propId = urlParams.get("id") || "DVPM001";
+  const propId = urlParams.get("id") || "KVPM001";
   const property = getPropertyById(propId);
 
   if (!property) {
@@ -20,7 +20,7 @@ function initPropertyDetails() {
   }
 
   // 1. Update Page Title & OpenGraph Meta
-  document.title = `${property.title} | DV PropMart Real Estate`;
+  document.title = `${property.title} | KV PropMart Real Estate`;
 
   // 2. Populate Header & Breadcrumbs
   const breadcrumbEl = document.querySelector("#detailBreadcrumbTitle");
@@ -162,8 +162,8 @@ function initPropertyDetails() {
         return;
       }
 
-      const waMsg = `Hello DV PropMart, I am inquiring about "${property.title}" (ID: ${property.id}).\n• Name: ${name}\n• Phone: ${phone}${msg ? `\n• Question: ${msg}` : ''}`;
-      
+      const waMsg = `Hello KV PropMart, I am inquiring about "${property.title}" (ID: ${property.id}).\n• Name: ${name}\n• Phone: ${phone}${msg ? `\n• Question: ${msg}` : ''}`;
+
       showToast("Preparing WhatsApp inquiry with property details...");
       setTimeout(() => {
         window.open(SITE_CONFIG.buildWhatsAppUrl(waMsg), "_blank");

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   DV PROPMART — DESIGN SYSTEM & CORE STYLES
+   KV PROPMART — DESIGN SYSTEM & CORE STYLES
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
@@ -68,7 +68,9 @@
 }
 
 /* Base Reset & Box Sizing */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -92,7 +94,10 @@ body {
   flex-direction: column;
 }
 
-img, svg, picture, video {
+img,
+svg,
+picture,
+video {
   display: block;
   max-width: 100%;
   height: auto;
@@ -104,7 +109,10 @@ a {
   transition: color var(--transition-fast);
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: inherit;
   font-size: inherit;
   outline: none;
@@ -116,12 +124,18 @@ button {
   background: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
 /* Typography Hierarchy */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--text-main);
   font-weight: 700;
@@ -129,11 +143,25 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
-h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); }
-h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); }
-h3 { font-size: clamp(1.3rem, 2vw, 1.7rem); }
-h4 { font-size: 1.2rem; }
-p { color: var(--text-muted); }
+h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+h3 {
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+p {
+  color: var(--text-muted);
+}
 
 .lead {
   font-size: 1.125rem;
@@ -255,12 +283,31 @@ p { color: var(--text-muted); }
 .brand-logo {
   display: flex;
   align-items: center;
+  gap: 0.65rem;
   text-decoration: none;
 }
 
-.brand-logo-svg {
+.brand-logo-svg,
+.brand-logo-img {
   height: 46px;
   width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-white);
+  line-height: 1;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.brand-logo-text .logo-highlight {
+  color: var(--accent-gold);
 }
 
 .nav-desktop {
@@ -326,7 +373,7 @@ p { color: var(--text-muted); }
 }
 
 .btn-whatsapp-header svg {
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
   transition: transform 0.25s ease;
 }
 
@@ -507,7 +554,8 @@ p { color: var(--text-muted); }
 }
 
 .footer-top {
-  padding: 4.5rem 0 3.5rem;
+  padding-top: 4.5rem;
+  padding-bottom: 3.5rem;
 }
 
 .footer-grid {
@@ -597,6 +645,8 @@ p { color: var(--text-muted); }
   gap: 0.75rem;
   font-size: 0.92rem;
   color: var(--text-light);
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .footer-contact-item svg {
@@ -605,8 +655,16 @@ p { color: var(--text-muted); }
   margin-top: 3px;
 }
 
+.footer-contact-item span,
+.footer-contact-item a {
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
 .footer-bottom {
-  padding: 1.5rem 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   border-top: 1px solid var(--border-dark);
   font-size: 0.875rem;
 }
@@ -671,10 +729,12 @@ p { color: var(--text-muted); }
     transform: scale(0.95);
     opacity: 0.8;
   }
+
   50% {
     transform: scale(1.18);
     opacity: 0;
   }
+
   100% {
     transform: scale(1.18);
     opacity: 0;
@@ -695,8 +755,17 @@ p { color: var(--text-muted); }
 }
 
 @keyframes waDotBlink {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(0.85); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(0.85);
+  }
 }
 
 .floating-whatsapp-btn:hover {
@@ -712,7 +781,7 @@ p { color: var(--text-muted); }
   height: 24px;
   flex-shrink: 0;
   transition: transform 0.3s ease;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
 }
 
 .floating-whatsapp-btn:hover svg,

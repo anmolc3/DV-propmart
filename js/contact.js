@@ -1,5 +1,5 @@
 /**
- * DV PropMart — Contact & Lead Capture Logic
+ * KV PropMart — Contact & Lead Capture Logic
  * Validates inputs, formats rich inquiry text, and connects directly via WhatsApp and tel.
  */
 
@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const waMsg = `Hello DV PropMart,\nI have submitted a new property inquiry:\n\n• Name: ${name}\n• Phone: ${phone}${email ? `\n• Email: ${email}` : ''}\n• Purpose: ${interestedIn}\n• Preferred Location: ${location}\n• Budget Range: ${budget}${message ? `\n• Requirement Details: ${message}` : ''}`;
+    const waMsg = `Hello KV PropMart,\nI have submitted a new property inquiry:\n\n• Name: ${name}\n• Phone: ${phone}${email ? `\n• Email: ${email}` : ''}\n• Purpose: ${interestedIn}\n• Preferred Location: ${location}\n• Budget Range: ${budget}${message ? `\n• Requirement Details: ${message}` : ''}`;
 
     showToast("Launching WhatsApp with your inquiry details...");
-    
+
     setTimeout(() => {
       window.open(SITE_CONFIG.buildWhatsAppUrl(waMsg), "_blank");
     }, 600);

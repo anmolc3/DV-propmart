@@ -1,5 +1,5 @@
 /**
- * DV PropMart — Properties Catalog & Filtering Engine
+ * KV PropMart — Properties Catalog & Filtering Engine
  * Handles live client-side multi-filtering, sorting, keyword search, pagination,
  * mobile filter drawer, and URL query parameter synchronization.
  */
@@ -59,13 +59,13 @@ function initPropertiesPage() {
   // 2. Main Filtering Function
   function applyFilters() {
     const selectedListingType = document.querySelector('input[name="filterListingType"]:checked')?.value || "all";
-    
+
     const selectedCategories = Array.from(document.querySelectorAll('input[name="filterCategory"]:checked')).map(cb => cb.value);
-    
+
     const selectedTypes = Array.from(document.querySelectorAll('input[name="filterType"]:checked')).map(cb => cb.value);
-    
+
     const selectedBedrooms = document.querySelector('input[name="filterBedrooms"]:checked')?.value || "all";
-    
+
     const selectedCity = document.querySelector("#filterCity")?.value || "all";
     const selectedMaxPrice = Number(document.querySelector("#filterMaxPrice")?.value) || 0;
     const keyword = (searchInput?.value || "").toLowerCase().trim();
@@ -177,13 +177,13 @@ function initPropertiesPage() {
     if (defaultRadio) defaultRadio.checked = true;
     const defaultBhk = document.querySelector('input[name="filterBedrooms"][value="all"]');
     if (defaultBhk) defaultBhk.checked = true;
-    
+
     const citySelect = document.querySelector("#filterCity");
     if (citySelect) citySelect.value = "all";
-    
+
     const maxPrice = document.querySelector("#filterMaxPrice");
     if (maxPrice) maxPrice.value = "0";
-    
+
     if (searchInput) searchInput.value = "";
     if (sortSelect) sortSelect.value = "newest";
 
@@ -196,7 +196,7 @@ function initPropertiesPage() {
   });
 
   if (sortSelect) sortSelect.addEventListener("change", applyFilters);
-  
+
   if (searchInput) {
     searchInput.addEventListener("input", () => {
       clearTimeout(searchInput._timer);

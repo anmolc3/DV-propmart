@@ -1,11 +1,11 @@
 /**
- * DV PropMart — Central Properties Repository
+ * KV PropMart — Central Properties Repository
  * Dynamic listings array containing realistic property listings across Delhi NCR.
  */
 
 const PROPERTIES_DATA = [
   {
-    id: "DVPM001",
+    id: "KVPM001",
     title: "The Grandeur — Luxury 3 BHK High-Rise Apartment",
     slug: "luxury-3-bhk-apartment-new-delhi",
     category: "Residential",
@@ -58,7 +58,7 @@ const PROPERTIES_DATA = [
     reraId: "DLRERA2023P0084"
   },
   {
-    id: "DVPM002",
+    id: "KVPM002",
     title: "Signature Royal Estate — 4 BHK Independent Luxury Villa",
     slug: "modern-4-bhk-luxury-villa-ghaziabad",
     category: "Residential",
@@ -109,7 +109,7 @@ const PROPERTIES_DATA = [
     reraId: "UPRERA2022V0192"
   },
   {
-    id: "DVPM003",
+    id: "KVPM003",
     title: "Apex Horizon — Prime Commercial Showroom & Retail Space",
     slug: "commercial-showroom-retail-gurugram",
     category: "Commercial",
@@ -159,7 +159,7 @@ const PROPERTIES_DATA = [
     reraId: "HRERA2024C0315"
   },
   {
-    id: "DVPM004",
+    id: "KVPM004",
     title: "Green Valley Enclave — Premium Residential Freehold Plot",
     slug: "premium-residential-plot-noida",
     category: "Plots & Land",
@@ -208,7 +208,7 @@ const PROPERTIES_DATA = [
     reraId: "UPRERA2023L0412"
   },
   {
-    id: "DVPM005",
+    id: "KVPM005",
     title: "Skyline Sky-Villa — 4 BHK Ultra-Luxury Penthouse",
     slug: "ultra-luxury-4bhk-penthouse-noida",
     category: "Luxury Properties",
@@ -258,7 +258,7 @@ const PROPERTIES_DATA = [
     reraId: "UPRERA2021P0991"
   },
   {
-    id: "DVPM006",
+    id: "KVPM006",
     title: "CyberOne Tower — Modern Corporate Grade-A Office Space",
     slug: "modern-office-space-cyber-city-gurugram",
     category: "Commercial",
@@ -308,7 +308,7 @@ const PROPERTIES_DATA = [
     reraId: "HRERA2020O0081"
   },
   {
-    id: "DVPM007",
+    id: "KVPM007",
     title: "Urban Nest — Contemporary 2 BHK Modern Apartment",
     slug: "contemporary-2-bhk-apartment-noida-ext",
     category: "Residential",
@@ -356,7 +356,7 @@ const PROPERTIES_DATA = [
     reraId: "UPRERA2022A0784"
   },
   {
-    id: "DVPM008",
+    id: "KVPM008",
     title: "Heritage Greens — 3 BHK Independent Builder Floor",
     slug: "independent-builder-floor-south-delhi",
     category: "Residential",
@@ -404,7 +404,7 @@ const PROPERTIES_DATA = [
     reraId: "DLRERA2023F0119"
   },
   {
-    id: "DVPM009",
+    id: "KVPM009",
     title: "Metropolis High-Street — Prime Corner Retail Shop",
     slug: "corner-retail-shop-sector-18-noida",
     category: "Commercial",
@@ -449,7 +449,7 @@ const PROPERTIES_DATA = [
     reraId: "UPRERA2021S0452"
   },
   {
-    id: "DVPM010",
+    id: "KVPM010",
     title: "Emerald Country Homes — 500 Sq. Yd. Luxury Farmhouse Plot",
     slug: "luxury-farmhouse-plot-surajkund-faridabad",
     category: "Plots & Land",
@@ -494,7 +494,7 @@ const PROPERTIES_DATA = [
     reraId: "HRERA2023L0912"
   },
   {
-    id: "DVPM011",
+    id: "KVPM011",
     title: "IndoSpace Industrial Park — 10,000 Sq.Ft. Industrial Shed",
     slug: "industrial-warehouse-shed-greater-noida",
     category: "Commercial",
@@ -540,7 +540,7 @@ const PROPERTIES_DATA = [
     reraId: "UPRERA2022I0093"
   },
   {
-    id: "DVPM012",
+    id: "KVPM012",
     title: "Palm Meadows — 3 BHK Spacious Residential House",
     slug: "3-bhk-spacious-house-faridabad",
     category: "Residential",

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   DV PROPMART — COMPONENTS CSS
+   KV PROPMART — COMPONENTS CSS
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -36,6 +36,8 @@
 
 .btn-block {
   width: 100%;
+  white-space: normal;
+  text-align: center;
 }
 
 .btn-primary {
@@ -142,12 +144,10 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(10, 17, 32, 0.74) 0%,
-    rgba(10, 17, 32, 0.689) 50%,
-    rgba(10, 17, 32, 0.633) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(10, 17, 32, 0.74) 0%,
+      rgba(10, 17, 32, 0.689) 50%,
+      rgba(10, 17, 32, 0.633) 100%);
 }
 
 .hero-content {
@@ -526,12 +526,10 @@
 .category-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(10, 17, 32, 0.15) 0%,
-    rgba(10, 17, 32, 0.5) 40%,
-    rgba(10, 17, 32, 0.92) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(10, 17, 32, 0.15) 0%,
+      rgba(10, 17, 32, 0.5) 40%,
+      rgba(10, 17, 32, 0.92) 100%);
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
@@ -910,7 +908,131 @@ textarea.form-control {
 }
 
 /* --------------------------------------------------------------------------
-   11. PROPERTY DETAIL SPECIFIC STYLES
+   11. CONTACT PAGE SPECIFIC STYLES
+   -------------------------------------------------------------------------- */
+.contact-page-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.contact-form-card {
+  background: var(--bg-white);
+  padding: 2.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-form-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-desc {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.contact-submit-btn {
+  margin-top: 1rem;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info-card {
+  background: var(--primary-dark);
+  color: #fff;
+  padding: 2.2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-dark);
+  margin-bottom: 1.5rem;
+}
+
+.contact-info-title {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 1.25rem;
+}
+
+.contact-channels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-channel-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.contact-channel-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-channel-icon.icon-gold {
+  background: rgba(200, 155, 60, 0.15);
+  color: var(--accent-gold);
+}
+
+.contact-channel-icon.icon-wa {
+  background: rgba(37, 211, 102, 0.15);
+  color: var(--whatsapp);
+}
+
+.contact-channel-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.contact-channel-label {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.2rem;
+}
+
+.contact-channel-value {
+  color: #E2E8F0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.45;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+  display: block;
+}
+
+.contact-channel-value.wa-link {
+  color: var(--whatsapp);
+  font-weight: 700;
+}
+
+.contact-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   12. PROPERTY DETAIL SPECIFIC STYLES
    -------------------------------------------------------------------------- */
 .property-details-layout {
   display: grid;

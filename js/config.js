@@ -1,40 +1,40 @@
 /**
- * DV PropMart — Central Site Configuration
+ * KV PropMart — Central Site Configuration
  * Update contact details, phone numbers, WhatsApp, and social links in this single file.
  */
 
 const SITE_CONFIG = {
-  businessName: "DV PropMart",
+  businessName: "KV PropMart",
   tagline: "Premier Real Estate Consultancy",
   phone: "+91 XXXXX XXXXX",          // Editable display phone number
   phoneRaw: "",                      // Clean format for tel: links (e.g. +91 XXXXX XXXXX)
   whatsapp: "+91 XXXXX XXXXX",       // Display WhatsApp number
   whatsappNumber: "",                // WhatsApp API formatted number (without +) e.g. 
-  email: "info@dvpropmart.com",
-  inquiryEmail: "sales@dvpropmart.com",
+  email: "info@KVpropmart.com",
+  inquiryEmail: "sales@KVpropmart.com",
   address: "Suite 408, Tower B, Sector 62, Noida, Delhi NCR - 201309",
   city: "Noida / Delhi NCR",
   state: "Uttar Pradesh & Delhi NCR",
   country: "India",
   businessHours: "Mon - Sat: 9:30 AM - 7:30 PM | Sun: By Appointment",
-  
+
   // Social Media Links (Editable placeholders)
   social: {
-    facebook: "https://facebook.com/dvpropmart",
-    instagram: "https://instagram.com/dvpropmart",
-    linkedin: "https://linkedin.com/company/dvpropmart",
-    youtube: "https://youtube.com/@dvpropmart"
+    facebook: "https://facebook.com/KVpropmart",
+    instagram: "https://instagram.com/KVpropmart",
+    linkedin: "https://linkedin.com/company/KVpropmart",
+    youtube: "https://youtube.com/@KVpropmart"
   },
 
   // WhatsApp Lead Message Builder Helper
   buildWhatsAppUrl: function (customMessage) {
-    const encoded = encodeURIComponent(customMessage || "Hello DV PropMart, I would like to inquire about real estate properties.");
+    const encoded = encodeURIComponent(customMessage || "Hello KV PropMart, I would like to inquire about real estate properties.");
     const num = this.whatsappNumber ? `${this.whatsappNumber}` : "";
     return `https://wa.me/${num}?text=${encoded}`;
   },
 
   buildPropertyInquiryMsg: function (prop) {
-    return `Hello DV PropMart, I am interested in "${prop.title}" (ID: ${prop.id}) located in ${prop.location} priced at ${prop.price}. Please share more details and arrange a site visit.`;
+    return `Hello KV PropMart, I am interested in "${prop.title}" (ID: ${prop.id}) located in ${prop.location} priced at ${prop.price}. Please share more details and arrange a site visit.`;
   }
 };
 

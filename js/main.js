@@ -1,5 +1,5 @@
 /**
- * DV PropMart — Main Global JavaScript
+ * KV PropMart — Main Global JavaScript
  * Handles navigation, mobile menu, scroll effects, back-to-top, toast notifications,
  * global inquiry modals, and WhatsApp lead interactions.
  */
@@ -73,7 +73,7 @@ function highlightActiveNavLink() {
   allNavLinks.forEach(link => {
     const href = link.getAttribute("href");
     if (!href) return;
-    
+
     // Normalize links
     if (href === currentPath || (currentPath === "" && href === "index.html") || (currentPath === "index.html" && href === "./")) {
       link.classList.add("active");
@@ -223,8 +223,8 @@ function initGlobalModals() {
       }
 
       // Construct customized WhatsApp message
-      const waMsg = `Hello DV PropMart, I would like to schedule a site visit / inquiry for:\n• Property: ${propTitle} ${propId ? `(ID: ${propId})` : ''}\n• Name: ${name}\n• Phone: ${phone}\n• Preferred Date: ${date}${message ? `\n• Notes: ${message}` : ''}`;
-      
+      const waMsg = `Hello KV PropMart, I would like to schedule a site visit / inquiry for:\n• Property: ${propTitle} ${propId ? `(ID: ${propId})` : ''}\n• Name: ${name}\n• Phone: ${phone}\n• Preferred Date: ${date}${message ? `\n• Notes: ${message}` : ''}`;
+
       const waUrl = SITE_CONFIG.buildWhatsAppUrl(waMsg);
 
       // Close modal
@@ -254,7 +254,7 @@ function initPropertyCardHelpers() {
     const price = waBtn.getAttribute("data-property-price") || "";
     const loc = waBtn.getAttribute("data-property-loc") || "";
 
-    const msg = `Hello DV PropMart, I am interested in "${title}" (ID: ${id}) in ${loc} priced at ${price}. Please share full brochure and availability details.`;
+    const msg = `Hello KV PropMart, I am interested in "${title}" (ID: ${id}) in ${loc} priced at ${price}. Please share full brochure and availability details.`;
     const url = SITE_CONFIG.buildWhatsAppUrl(msg);
     window.open(url, "_blank");
   });
