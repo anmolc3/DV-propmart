@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Properties in Delhi NCR | DV PropMart</title>
+  <meta name="description" content="Explore verified residential flats, luxury villas, commercial shops, corporate offices and residential plots in Delhi, Noida, Gurugram, and Ghaziabad.">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Properties in Delhi NCR | DV PropMart">
+  <meta property="og:description" content="Search verified residential and commercial property listings with pricing and specs.">
+  <meta property="og:image" content="assets/images/hero-home.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       HEADER & NAVIGATION
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="DV PropMart Homepage">
+        <img src="assets/logo/logo.svg" alt="DV PropMart Logo" class="brand-logo-svg">
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="properties.html" class="nav-link">Properties</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#" class="btn-call-header" data-config="phone">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>Call Now</span>
+        </a>
+
+        <a href="https://wa.me/" target="_blank" rel="noopener" class="btn-whatsapp-header" data-config="whatsapp">
+          <img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="wa-icon-img">
+          <span>WhatsApp Us</span>
+        </a>
+
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+        <div class="mobile-drawer-header">
+      <span class="mobile-drawer-brand">Menu</span>
+      <button class="mobile-drawer-close-btn" aria-label="Close navigation menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+<div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="properties.html" class="mobile-nav-link">Properties</a>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="faq.html" class="mobile-nav-link">FAQ</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+    <div class="mobile-drawer-actions">
+      <a href="https://wa.me/" class="btn btn-whatsapp btn-block" data-config="whatsapp">WhatsApp Us</a>
+      <a href="#" class="btn btn-outline-light btn-block" data-config="phone">Call Now</a>
+    </div>
+  </aside>
+
+  <!-- ======================================================================
+       PAGE HEADER BANNER
+       ====================================================================== -->
+  <section class="section-sm section-bg-dark" style="background: linear-gradient(135deg, #0A1120 0%, #15223E 100%);">
+    <div class="container">
+      <span class="badge-tag">Verified Portfolio</span>
+      <h1 style="color: #fff; margin-bottom: 0.5rem;">Explore Properties in Delhi NCR</h1>
+      <p style="color: #94A3B8;">Filter by purpose, asset type, budget, bedrooms, and prime locations.</p>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       MAIN PROPERTY CATALOG CONTENT
+       ====================================================================== -->
+  <main class="section">
+    <div class="container">
+      <div class="properties-page-layout">
+        
+        <!-- 1. FILTERS SIDEBAR -->
+        <aside class="filters-sidebar">
+          <div class="filters-header">
+            <h3 style="font-size: 1.15rem; font-weight: 700;">Filters</h3>
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+              <button class="filter-reset-btn" id="filterResetBtn">Reset All</button>
+              <button id="mobileFilterClose" class="mobile-filter-trigger" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">&times;</button>
+            </div>
+          </div>
+
+          <!-- Listing Type (Buy / Rent) -->
+          <div class="filter-group">
+            <div class="filter-title">Purpose</div>
+            <div class="filter-checkbox-list">
+              <label class="filter-checkbox-item">
+                <input type="radio" name="filterListingType" value="all" checked>
+                <span>All (Buy &amp; Rent)</span>
+              </label>
+              <label class="filter-checkbox-item">
+                <input type="radio" name="filterListingType" value="Sale">
+                <span>Buy / Sale</span>
+              </label>
+              <label class="filter-checkbox-item">
+                <input type="radio" name="filterListingType" value="Rent">
+                <span>Rent / Lease</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Location (City) -->
+          <div class="filter-group">
+            <div class="filter-title">Location / City</div>
+            <select id="filterCity" class="form-control" style="font-size: 0.9rem;">
+              <option value="all">All Cities (Delhi NCR)</option>
+              <option value="New Delhi">New Delhi</option>
+              <option value="Gurugram">Gurugram</option>
+              <option value="Noida">Noida &amp; Greater Noida</option>
+              <option value="Ghaziabad">Ghaziabad</option>
+              <option value="Faridabad">Faridabad</option>
+            </select>
+          </div>
+
+          <!-- Category -->
+          <div class="filter-group">
+            <div class="filter-title">Category</div>
+            <div class="filter-checkbox-list">
+              <label class="filter-checkbox-item">
+                <input type="checkbox" name="filterCategory" value="Residential">
+                <span>Residential</span>
+              </label>
+              <label class="filter-checkbox-item">
+                <input type="checkbox" name="filterCategory" value="Commercial">
+                <span>Commercial</span>
+              </label>
+              <label class="filter-checkbox-item">
+                <input type="checkbox" name="filterCategory" value="Plots & Land">
+                <span>Plots &amp; Land</span>
+              </label>
+              <label class="filter-checkbox-item">
+                <input type="checkbox" name="filterCategory" value="Luxury Properties">
+                <span>Luxury Properties</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Property Type -->
+          <div class="filter-group">
+            <div class="filter-title">Property Type</div>
+            <div class="filter-checkbox-list">
+              <label class="filter-checkbox-item">
+                <input type="checkbox" name="filterType" value="Apartment">
+                <span>Apartment / Flat</span>
+              </label>
+              <label class="filter-checkbox-item">
+                <input type="checkbox" name="filterType" value="Villa">
+                <span>Luxury Villa</span>
+              </label>
+              <label class="filter-checkbox-item">
+                <input type="checkbox" name="filterType" value="House">
+                <span>Independent House / Floor</span>
+              </label>
+              <label class="filter-checkbox-item">
+                <input type="checkbox" name="filterType" value="Plot/Land">
+                <span>Plot / Land</span>
+              </label>
+              <label class="filter-checkbox-item">
+                <input type="checkbox" name="filterType" value="Commercial">
+                <span>Commercial Showroom</span>
+              </label>
+              <label class="filter-checkbox-item">
+                <input type="checkbox" name="filterType" value="Office">
+                <span>Office Space</span>
+              </label>
+              <label class="filter-checkbox-item">
+                <input type="checkbox" name="filterType" value="Shop">
+                <span>Retail Shop</span>
+              </label>
+              <label class="filter-checkbox-item">
+                <input type="checkbox" name="filterType" value="Industrial">
+                <span>Industrial Shed</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Bedrooms (BHK) -->
+          <div class="filter-group">
+            <div class="filter-title">Bedrooms (BHK)</div>
+            <div class="filter-checkbox-list">
+              <label class="filter-checkbox-item">
+                <input type="radio" name="filterBedrooms" value="all" checked>
+                <span>Any BHK</span>
+              </label>
+              <label class="filter-checkbox-item">
+                <input type="radio" name="filterBedrooms" value="2">
+                <span>2 BHK</span>
+              </label>
+              <label class="filter-checkbox-item">
+                <input type="radio" name="filterBedrooms" value="3">
+                <span>3 BHK</span>
+              </label>
+              <label class="filter-checkbox-item">
+                <input type="radio" name="filterBedrooms" value="4+">
+                <span>4+ BHK / Penthouse</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Max Budget -->
+          <div class="filter-group">
+            <div class="filter-title">Max Budget</div>
+            <select id="filterMaxPrice" class="form-control" style="font-size: 0.9rem;">
+              <option value="0">Any Budget</option>
+              <option value="7500000">Up to ₹75 Lakh</option>
+              <option value="12500000">Up to ₹1.25 Crore</option>
+              <option value="20000000">Up to ₹2.0 Crore</option>
+              <option value="35000000">Up to ₹3.5 Crore</option>
+            </select>
+          </div>
+        </aside>
+
+        <!-- 2. CATALOG MAIN BODY -->
+        <div>
+          <!-- Toolbar -->
+          <div class="properties-toolbar">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <button class="btn btn-outline-dark btn-sm mobile-filter-trigger" id="mobileFilterToggle">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                </svg>
+                Filters
+              </button>
+              <span id="propertiesCountDisplay" style="font-weight: 600; color: var(--text-main); font-size: 0.95rem;">
+                Showing 12 properties
+              </span>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+              <!-- Search Keyword -->
+              <input type="text" id="propertySearchInput" class="form-control" style="width: 220px; padding: 0.45rem 0.8rem; font-size: 0.88rem;" placeholder="Search title, location...">
+
+              <!-- Sort By -->
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <label for="sortBySelect" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Sort:</label>
+                <select id="sortBySelect" class="form-control" style="width: auto; padding: 0.45rem 0.8rem; font-size: 0.88rem;">
+                  <option value="newest">Featured / Newest</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="area-high">Area: Largest First</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Properties Grid Container -->
+          <div class="property-grid" id="propertiesCatalogGrid">
+            <!-- Injected by properties.js -->
+          </div>
+
+          <!-- Load More Button Container -->
+          <div class="text-center" style="text-align: center; margin-top: 3rem;">
+            <button class="btn btn-outline-dark btn-lg" id="loadMorePropertiesBtn" style="display: none;">
+              Load More Properties
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER & MODALS
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo/logo.svg" alt="DV PropMart Logo" class="brand-logo-svg" style="height: 42px;">
+          <p>
+            DV PropMart is a premier real estate consultancy serving Delhi NCR. We assist home buyers, commercial clients, and investors in making sound, transparent, high-value property decisions.
+          </p>
+          <div class="footer-socials">
+            <a href="https://facebook.com/dvpropmart" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://instagram.com/dvpropmart" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="https://linkedin.com/company/dvpropmart" target="_blank" rel="noopener" class="social-icon-btn" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="properties.html">Properties</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Property Types</h4>
+          <div class="footer-links">
+            <a href="properties.html?type=Apartment">Apartments &amp; Flats</a>
+            <a href="properties.html?type=Villa">Luxury Villas</a>
+            <a href="properties.html?category=Plots%20%26%20Land">Plots &amp; Land</a>
+            <a href="properties.html?type=Commercial">Commercial Showrooms</a>
+            <a href="properties.html?type=Office">Corporate Offices</a>
+            <a href="properties.html?category=Luxury%20Properties">Penthouses</a>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <h4 class="footer-title">Contact Us</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span data-config="address">Suite 408, Tower B, Sector 62, Noida, Delhi NCR - 201309</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="#" data-config="phone">+91 XXXXX XXXXX</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:info@dvpropmart.com" data-config="email">info@dvpropmart.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>&copy; 2026 DV PropMart. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating & Mobile Actions -->
+  <a href="https://wa.me/" target="_blank" rel="noopener" class="floating-whatsapp-btn" aria-label="Contact on WhatsApp" data-config="whatsapp">
+    <span class="wa-status-dot"></span>
+    <img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="wa-icon-img">
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <button class="back-to-top-btn" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="js/config.js"></script>
+  <script src="js/properties-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/properties.js"></script>
+</body>
+</html>

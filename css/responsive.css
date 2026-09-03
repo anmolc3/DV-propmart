@@ -1,0 +1,384 @@
+
+/* 1. MOBILE BOTTOM ACTION BAR (Sticky CTA on mobile) */
+
+.mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 995;
+  background: rgba(10, 17, 32, 0.98);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border-dark);
+  padding: 0.6rem 1rem;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-bottom-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1.1fr;
+  gap: 0.5rem;
+}
+
+.mobile-bottom-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.65rem 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  min-height: 44px;
+}
+
+.mobile-bottom-btn.btn-call {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-white);
+  border: 1px solid var(--border-dark);
+}
+
+.mobile-bottom-btn.btn-wa {
+  background: var(--whatsapp);
+  color: #FFFFFF;
+}
+
+.mobile-bottom-btn.btn-enquire {
+  background: var(--accent-gold);
+  color: #0A1120;
+}
+
+/* --------------------------------------------------------------------------
+   2. PROPERTIES PAGE FILTER SIDEBAR & MOBILE DRAWER
+   -------------------------------------------------------------------------- */
+.properties-page-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.filters-sidebar {
+  background: var(--bg-white);
+  padding: 1.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  position: sticky;
+  top: 100px;
+}
+
+.filters-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.filter-reset-btn {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.filter-reset-btn:hover {
+  text-decoration: underline;
+}
+
+.filter-group {
+  margin-bottom: 1.5rem;
+}
+
+.filter-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+}
+
+.filter-checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.filter-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.filter-checkbox-item input[type="checkbox"],
+.filter-checkbox-item input[type="radio"] {
+  accent-color: var(--accent-gold);
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.properties-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: var(--bg-white);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  margin-bottom: 2rem;
+}
+
+.mobile-filter-trigger {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   3. RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+
+/* Large Tablets & Small Laptops (max-width: 1100px) */
+@media screen and (max-width: 1100px) {
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 2.5rem;
+  }
+  
+  .footer-contact {
+    grid-column: span 3;
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .details-specs-table {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets (max-width: 900px) */
+@media screen and (max-width: 900px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  .nav-desktop,
+  .btn-call-header,
+  .btn-whatsapp-header {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .search-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-btn-col {
+    grid-column: span 2;
+  }
+
+  .about-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .properties-page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 85%;
+    max-width: 340px;
+    height: 100vh;
+    z-index: 1050;
+    overflow-y: auto;
+    border-radius: 0;
+    transition: left 0.35s ease;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.25);
+  }
+
+  .filters-sidebar.mobile-open {
+    left: 0;
+  }
+
+  .mobile-filter-trigger {
+    display: inline-flex;
+  }
+
+  .property-details-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sticky-inquiry-box {
+    position: static;
+    margin-top: 2rem;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Bottom bar removed as requested */
+  .mobile-bottom-bar {
+    display: none !important;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+
+  .floating-whatsapp-btn {
+    bottom: 22px;
+    right: 20px;
+    padding: 0.75rem 1.15rem;
+    font-size: 0.88rem;
+  }
+
+  .floating-whatsapp-btn span:not(.wa-status-dot) {
+    display: inline-block;
+  }
+
+  .back-to-top-btn {
+    bottom: 22px;
+    left: 20px;
+  }
+}
+
+/* Mobile Devices (max-width: 640px) */
+@media screen and (max-width: 640px) {
+  .section {
+    padding: 4rem 0;
+  }
+
+  .section-sm {
+    padding: 2.5rem 0;
+  }
+
+  .hero-section {
+    min-height: 75vh;
+    padding: 4rem 0 5.5rem;
+  }
+
+  .hero-search-wrapper {
+    margin-top: -2.5rem;
+  }
+
+  .search-panel {
+    padding: 1.25rem 1rem;
+  }
+
+  .search-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .search-btn-col {
+    grid-column: span 1;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-contact {
+    grid-column: span 1;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .details-specs-table {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+}
+
+/* Small screen mobile (max-width: 380px) */
+@media screen and (max-width: 380px) {
+  .brand-logo-svg {
+    height: 38px;
+  }
+
+  .btn-whatsapp-header {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .property-specs-list {
+    font-size: 0.78rem;
+  }
+}

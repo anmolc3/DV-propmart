@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | DV PropMart — Real Estate Consultants</title>
+  <meta name="description" content="Connect with DV PropMart real estate advisors in Noida & Delhi NCR via Phone, WhatsApp, or our interactive property inquiry form.">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact DV PropMart | Real Estate Consultants">
+  <meta property="og:description" content="Get in touch with our team for property discovery, site visits, and consultation.">
+  <meta property="og:image" content="assets/images/about-consultation.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       HEADER & NAVIGATION
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="DV PropMart Homepage">
+        <img src="assets/logo/logo.svg" alt="DV PropMart Logo" class="brand-logo-svg">
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="properties.html" class="nav-link">Properties</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#" class="btn-call-header" data-config="phone">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>Call Now</span>
+        </a>
+
+        <a href="https://wa.me/" target="_blank" rel="noopener" class="btn-whatsapp-header" data-config="whatsapp">
+          <img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="wa-icon-img">
+          <span>WhatsApp Us</span>
+        </a>
+
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+        <div class="mobile-drawer-header">
+      <span class="mobile-drawer-brand">Menu</span>
+      <button class="mobile-drawer-close-btn" aria-label="Close navigation menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+<div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="properties.html" class="mobile-nav-link">Properties</a>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="faq.html" class="mobile-nav-link">FAQ</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+    <div class="mobile-drawer-actions">
+      <a href="https://wa.me/" class="btn btn-whatsapp btn-block" data-config="whatsapp">WhatsApp Us</a>
+      <a href="#" class="btn btn-outline-light btn-block" data-config="phone">Call Now</a>
+    </div>
+  </aside>
+
+  <!-- ======================================================================
+       PAGE HEADER
+       ====================================================================== -->
+  <section class="section-sm section-bg-dark" style="background: linear-gradient(135deg, #0A1120 0%, #15223E 100%);">
+    <div class="container">
+      <span class="badge-tag">Get in Touch</span>
+      <h1 style="color: #fff; margin-bottom: 0.5rem;">Let's Find Your Next Property</h1>
+      <p style="color: #94A3B8;">Reach out for inquiries, customized property lists, or to book a free guided site visit.</p>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       CONTACT BODY & INTERACTIVE LEAD FORM
+       ====================================================================== -->
+  <main class="section">
+    <div class="container">
+      <div class="property-details-layout">
+        
+        <!-- LEFT: Inquiry Form -->
+        <div style="background: var(--bg-white); padding: 2.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+          <span class="badge-tag" style="margin-bottom: 0.75rem;">Direct Inquiry Desk</span>
+          <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Tell Us What You Need</h2>
+          <p style="color: var(--text-muted); margin-bottom: 2rem;">
+            Fill in your preferred criteria below. Submitting will validate your requirement and instantly prepare a direct WhatsApp consultation.
+          </p>
+
+          <form id="mainContactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Full Name <span class="required">*</span></label>
+                <input type="text" id="contactName" class="form-control" placeholder="e.g. Ramesh Chandra" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactPhone">Phone / WhatsApp Number <span class="required">*</span></label>
+                <input type="tel" id="contactPhone" class="form-control" placeholder="e.g. +91 XXXXX XXXXX" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Email Address (Optional)</label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="e.g. name@example.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactInterest">Interested In</label>
+                <select id="contactInterest" class="form-control">
+                  <option value="Buying Residential Apartment">Buying Residential Apartment</option>
+                  <option value="Buying Luxury Villa / House">Buying Luxury Villa / House</option>
+                  <option value="Buying Commercial / Showroom / Office">Buying Commercial / Showroom / Office</option>
+                  <option value="Buying Residential Plot / Land">Buying Residential Plot / Land</option>
+                  <option value="Selling / Liquidating Property">Selling / Liquidating Property</option>
+                  <option value="Renting Commercial Space">Renting Commercial Space</option>
+                  <option value="NRI / Investment Consultation">NRI / Investment Consultation</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="contactLocation">Preferred Location / Sector</label>
+                <input type="text" id="contactLocation" class="form-control" placeholder="e.g. Noida Expressway / Gurugram / Dwarka">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactBudget">Approximate Budget Range</label>
+                <select id="contactBudget" class="form-control">
+                  <option value="Below ₹50 Lakh">Below ₹50 Lakh</option>
+                  <option value="₹50 Lakh - ₹1.0 Crore">₹50 Lakh - ₹1.0 Crore</option>
+                  <option value="₹1.0 Crore - ₹2.0 Crore" selected>₹1.0 Crore - ₹2.0 Crore</option>
+                  <option value="₹2.0 Crore - ₹4.0 Crore">₹2.0 Crore - ₹4.0 Crore</option>
+                  <option value="Above ₹4.0 Crore">Above ₹4.0 Crore</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactMessage">Specific Requirements &amp; Notes</label>
+              <textarea id="contactMessage" class="form-control" placeholder="Mention any details like preferred floor, possession date, or bank loan requirements..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold btn-lg btn-block" style="margin-top: 1rem;">
+              <img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="wa-icon-img">
+              Send Property Inquiry via WhatsApp &rarr;
+            </button>
+          </form>
+        </div>
+
+        <!-- RIGHT: Contact Info & Action Cards -->
+        <div>
+          <div style="background: var(--primary-dark); color: #fff; padding: 2.2rem; border-radius: var(--radius-md); border: 1px solid var(--border-dark); margin-bottom: 1.5rem;">
+            <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 1.25rem;">Direct Contact Channels</h3>
+
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div style="display: flex; align-items: flex-start; gap: 0.85rem;">
+                <div style="width: 38px; height: 38px; border-radius: var(--radius-sm); background: rgba(200, 155, 60, 0.15); display: flex; align-items: center; justify-content: center; color: var(--accent-gold); flex-shrink: 0;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.82rem; color: #94A3B8; text-transform: uppercase;">Call Us</div>
+                  <a href="#" style="color: #fff; font-weight: 700; font-size: 1.05rem;" data-config="phone">+91 XXXXX XXXXX</a>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: flex-start; gap: 0.85rem;">
+                <div style="width: 38px; height: 38px; border-radius: var(--radius-sm); background: rgba(37, 211, 102, 0.15); display: flex; align-items: center; justify-content: center; color: var(--whatsapp); flex-shrink: 0;">
+                  <img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="wa-icon-img">
+                </div>
+                <div>
+                  <div style="font-size: 0.82rem; color: #94A3B8; text-transform: uppercase;">WhatsApp Support</div>
+                  <a href="https://wa.me/" target="_blank" rel="noopener" style="color: var(--whatsapp); font-weight: 700; font-size: 1.05rem;" data-config="whatsapp">+91 XXXXX XXXXX</a>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: flex-start; gap: 0.85rem;">
+                <div style="width: 38px; height: 38px; border-radius: var(--radius-sm); background: rgba(200, 155, 60, 0.15); display: flex; align-items: center; justify-content: center; color: var(--accent-gold); flex-shrink: 0;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.82rem; color: #94A3B8; text-transform: uppercase;">Email Address</div>
+                  <a href="mailto:info@dvpropmart.com" style="color: #fff; font-weight: 600;" data-config="email">info@dvpropmart.com</a>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: flex-start; gap: 0.85rem;">
+                <div style="width: 38px; height: 38px; border-radius: var(--radius-sm); background: rgba(200, 155, 60, 0.15); display: flex; align-items: center; justify-content: center; color: var(--accent-gold); flex-shrink: 0;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.82rem; color: #94A3B8; text-transform: uppercase;">Office Address</div>
+                  <div style="color: #E2E8F0; font-size: 0.92rem; line-height: 1.45;" data-config="address">
+                    Suite 408, Tower B, Sector 62, Noida, Delhi NCR - 201309
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: flex-start; gap: 0.85rem;">
+                <div style="width: 38px; height: 38px; border-radius: var(--radius-sm); background: rgba(200, 155, 60, 0.15); display: flex; align-items: center; justify-content: center; color: var(--accent-gold); flex-shrink: 0;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.82rem; color: #94A3B8; text-transform: uppercase;">Consultation Hours</div>
+                  <div style="color: #E2E8F0; font-size: 0.92rem;" data-config="businessHours">
+                    Mon - Sat: 9:30 AM - 7:30 PM | Sun: By Appointment
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <button class="btn btn-gold btn-block btn-lg" data-modal-target="inquiryModal" data-inquiry-type="Site Visit">
+              Schedule Free Site Visit
+            </button>
+            <a href="https://wa.me/" target="_blank" rel="noopener" class="btn btn-whatsapp btn-block btn-lg" data-config="whatsapp">
+              Direct WhatsApp Chat
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER & MODALS
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo/logo.svg" alt="DV PropMart Logo" class="brand-logo-svg" style="height: 42px;">
+          <p>DV PropMart is a premier real estate consultancy serving Delhi NCR. We assist home buyers, commercial clients, and investors with transparency and verified listings.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="properties.html">Properties</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Property Types</h4>
+          <div class="footer-links">
+            <a href="properties.html?type=Apartment">Apartments</a>
+            <a href="properties.html?type=Villa">Villas</a>
+            <a href="properties.html?category=Plots%20%26%20Land">Plots</a>
+            <a href="properties.html?type=Commercial">Commercial</a>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <h4 class="footer-title">Contact</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span data-config="address">Suite 408, Tower B, Sector 62, Noida, Delhi NCR - 201309</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="#" data-config="phone">+91 XXXXX XXXXX</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>&copy; 2026 DV PropMart. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Modal for Site Visit / Inquiry -->
+  <div class="modal-overlay" id="inquiryModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <h3 class="modal-title" style="margin-bottom: 0.25rem;">Schedule a Property Site Visit</h3>
+      <p class="modal-subtitle" style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+        Speak directly with our expert property advisors.
+      </p>
+
+      <form id="modalInquiryForm">
+        <input type="hidden" id="modalPropertyId" value="">
+        <input type="hidden" id="modalPropertyTitle" value="">
+
+        <div class="form-group">
+          <label class="form-label" for="modalName">Your Full Name <span class="required">*</span></label>
+          <input type="text" id="modalName" class="form-control" placeholder="e.g. Rajesh Kumar" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modalPhone">Phone / WhatsApp Number <span class="required">*</span></label>
+          <input type="tel" id="modalPhone" class="form-control" placeholder="e.g. +91 XXXXX XXXXX" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modalDate">Preferred Date / Time</label>
+          <input type="text" id="modalDate" class="form-control" placeholder="e.g. This Saturday Morning">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modalMessage">Requirement Details</label>
+          <textarea id="modalMessage" class="form-control" style="min-height: 80px;" placeholder="Tell us what you are looking for..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-block btn-lg" style="margin-top: 1rem;">
+          Submit &amp; Connect on WhatsApp &rarr;
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating Actions & Mobile Bottom Bar -->
+  <a href="https://wa.me/" target="_blank" rel="noopener" class="floating-whatsapp-btn" aria-label="Contact on WhatsApp" data-config="whatsapp">
+    <span class="wa-status-dot"></span>
+    <img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="wa-icon-img">
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <button class="back-to-top-btn" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
