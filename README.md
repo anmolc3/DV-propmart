@@ -95,7 +95,7 @@ Open [`js/properties-data.js`](file:///c:/Users/anmol/OneDrive/Desktop/KV%20Prop
   parking: 3,
   location: "Sector 150, Noida Expressway",
   city: "Noida",
-  heroImage: "assets/images/hero-home.jpg",
+  heroImage: "assets/images/hero-home.webp",
   images: [...],
   description: "...",
   amenities: ["Swimming Pool", "Clubhouse", "24x7 Security"],

@@ -27,9 +27,9 @@ const PROPERTIES_DATA = [
     facing: "North-East (Park Facing)",
     location: "Dwarka Expressway, New Delhi",
     city: "New Delhi",
-    heroImage: "assets/images/cat-residential.jpg",
+    heroImage: "assets/images/cat-residential.webp",
     images: [
-      "assets/images/cat-residential.jpg",
+      "assets/images/cat-residential.webp",
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=1200&q=80"
@@ -80,9 +80,9 @@ const PROPERTIES_DATA = [
     facing: "East Facing",
     location: "Wave City, NH-24, Ghaziabad",
     city: "Ghaziabad",
-    heroImage: "assets/images/hero-home.jpg",
+    heroImage: "assets/images/hero-home.webp",
     images: [
-      "assets/images/hero-home.jpg",
+      "assets/images/hero-home.webp",
       "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80"

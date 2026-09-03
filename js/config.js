@@ -41,9 +41,18 @@ const SITE_CONFIG = {
 
 // Global DOM updater for configuration elements
 document.addEventListener("DOMContentLoaded", () => {
+  function updateElementText(el, newText) {
+    const span = el.querySelector("span:not(.wa-status-dot)");
+    if (span) {
+      span.textContent = newText;
+    } else if (!el.querySelector("svg, img")) {
+      el.textContent = newText;
+    }
+  }
+
   // Update elements with data-config attribute
   document.querySelectorAll("[data-config='phone']").forEach(el => {
-    el.textContent = SITE_CONFIG.phone;
+    updateElementText(el, SITE_CONFIG.phone);
     if (el.tagName === "A") el.href = `tel:${SITE_CONFIG.phoneRaw}`;
   });
 
@@ -51,18 +60,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (el.classList.contains("floating-whatsapp-btn") || el.getAttribute("data-config") === "whatsapp-action") {
       if (el.tagName === "A") el.href = SITE_CONFIG.buildWhatsAppUrl();
     } else {
-      el.textContent = SITE_CONFIG.whatsapp;
+      updateElementText(el, SITE_CONFIG.whatsapp);
       if (el.tagName === "A") el.href = SITE_CONFIG.buildWhatsAppUrl();
     }
   });
 
   document.querySelectorAll("[data-config='email']").forEach(el => {
-    el.textContent = SITE_CONFIG.email;
+    updateElementText(el, SITE_CONFIG.email);
     if (el.tagName === "A") el.href = `mailto:${SITE_CONFIG.email}`;
   });
 
   document.querySelectorAll("[data-config='shortAddress']").forEach(el => {
-    el.textContent = SITE_CONFIG.shortAddress;
+    updateElementText(el, SITE_CONFIG.shortAddress);
     if (el.tagName === "A") {
       el.href = SITE_CONFIG.mapUrl;
       el.target = "_blank";
@@ -71,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.querySelectorAll("[data-config='address']").forEach(el => {
-    el.textContent = SITE_CONFIG.address;
+    updateElementText(el, SITE_CONFIG.address);
     if (el.tagName === "A") {
       el.href = SITE_CONFIG.mapUrl;
       el.target = "_blank";
@@ -80,6 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.querySelectorAll("[data-config='businessName']").forEach(el => {
-    el.textContent = SITE_CONFIG.businessName;
+    updateElementText(el, SITE_CONFIG.businessName);
   });
 });
