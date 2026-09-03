@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initGlobalModals();
   highlightActiveNavLink();
   initPropertyCardHelpers();
+  initHeroSlideshow();
 });
 
 /* --------------------------------------------------------------------------
@@ -338,4 +339,54 @@ function renderPropertyCardHTML(prop) {
       </div>
     </article>
   `;
+}
+
+/* --------------------------------------------------------------------------
+   8. HERO BACKGROUND SLIDESHOW WITH SMOOTH FADE ANIMATION
+   -------------------------------------------------------------------------- */
+function initHeroSlideshow() {
+  const slides = document.querySelectorAll(".hero-slide");
+  const dots = document.querySelectorAll(".hero-dot");
+  if (!slides.length) return;
+
+  let currentIndex = 0;
+  let timer = null;
+
+  function showSlide(index) {
+    slides.forEach((s, i) => s.classList.toggle("active", i === index));
+    dots.forEach((d, i) => d.classList.toggle("active", i === index));
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    const next = (currentIndex + 1) % slides.length;
+    showSlide(next);
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    timer = setInterval(nextSlide, 4000);
+  }
+
+  function stopAutoplay() {
+    if (timer) clearInterval(timer);
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      const idx = parseInt(dot.getAttribute("data-index"), 10);
+      if (!isNaN(idx)) {
+        showSlide(idx);
+        startAutoplay();
+      }
+    });
+  });
+
+  const heroSection = document.querySelector(".hero-section");
+  if (heroSection) {
+    heroSection.addEventListener("mouseenter", stopAutoplay);
+    heroSection.addEventListener("mouseleave", startAutoplay);
+  }
+
+  startAutoplay();
 }

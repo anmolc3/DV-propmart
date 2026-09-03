@@ -8,12 +8,17 @@
   <meta name="description"
     content="The page you are looking for does not exist. Explore residential, commercial, and land properties with KV PropMart.">
 
-    <!-- Favicon -->
+      <!-- Favicon & PWA / Mobile Homescreen -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
   <link rel="shortcut icon" href="assets/favicon/favicon.ico">
   <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <meta name="theme-color" content="#0A1120">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="KV PropMart">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -22,6 +27,38 @@
 <body>
 
   <!-- HEADER -->
+      <!-- Top Bar -->
+  <div class="site-topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <a href="https://maps.app.goo.gl/RGYpHD5rE8jEWtjaA" target="_blank" rel="noopener" class="topbar-item topbar-link" data-config="shortAddress" title="Open office location in Google Maps">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Parsvnath Bibhab Plaza, Alpha-I, Greater Noida</span>
+        </a>
+      </div>
+      <div class="topbar-right">
+        <a href="tel:+918800994453" class="topbar-item topbar-link" data-config="phone">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          <span>+91 88009 94453</span>
+        </a>
+        <a href="mailto:info@KVpropmart.com" class="topbar-item topbar-link" data-config="email">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>info@KVpropmart.com</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand-logo" aria-label="KV PropMart Homepage">
@@ -34,13 +71,19 @@
         <a href="properties.html" class="nav-link">Properties</a>
         <a href="services.html" class="nav-link">Services</a>
         <a href="about.html" class="nav-link">About Us</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="header-actions">
-        <a href="https://wa.me/" target="_blank" rel="noopener" class="btn-whatsapp-header" data-config="whatsapp">
-          <span>WhatsApp Us</span>
-        </a>
+        <a href="contact.html" class="btn btn-gold btn-sm btn-header-cta">Enquire Now</a>
+
+        <!-- Hamburger toggle button -->
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>

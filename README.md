@@ -64,14 +64,13 @@ Open [`js/config.js`](file:///c:/Users/anmol/OneDrive/Desktop/KV%20PropMart/js/c
 ```javascript
 const SITE_CONFIG = {
   businessName: "KV PropMart",
-  phone: "+91 XXXXX XXXXX",
-  phoneRaw: "+91 XXXXX XXXXX",
-  whatsapp: "+91 XXXXX XXXXX",
-  whatsappNumber: "", // No plus sign for WhatsApp API
+  phone: "+91 88009 94453",
+  phoneRaw: "+91 88009 94453",
+  whatsapp: "+91 88009 94453",
+  whatsappNumber: "918800994453", // No plus sign for WhatsApp API
   email: "info@KVpropmart.com",
-  address: "Suite 408, Tower B, Sector 62, Noida, Delhi NCR - 201309",
-  city: "Noida / Delhi NCR",
-  businessHours: "Mon - Sat: 9:30 AM - 7:30 PM | Sun: By Appointment"
+  address: "UGF-7, Parsvnath Bibhab Plaza, Alpha-I Commercial Belt, Block E, Alpha I, Greater Noida, Uttar Pradesh - 201310",
+  city: "Greater Noida, Delhi NCR"
 };
 ```
 

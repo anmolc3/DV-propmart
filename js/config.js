@@ -6,17 +6,18 @@
 const SITE_CONFIG = {
   businessName: "KV PropMart",
   tagline: "Premier Real Estate Consultancy",
-  phone: "+91 XXXXX XXXXX",          // Editable display phone number
-  phoneRaw: "",                      // Clean format for tel: links (e.g. +91 XXXXX XXXXX)
-  whatsapp: "+91 XXXXX XXXXX",       // Display WhatsApp number
-  whatsappNumber: "",                // WhatsApp API formatted number (without +) e.g. 
+  phone: "+91 88009 94453",          // Editable display phone number
+  phoneRaw: "+918800994453",         // Clean format for tel: links
+  whatsapp: "+91 88009 94453",       // Display WhatsApp number
+  whatsappNumber: "918800994453",    // WhatsApp API formatted number (without +)
   email: "info@KVpropmart.com",
   inquiryEmail: "sales@KVpropmart.com",
-  address: "Suite 408, Tower B, Sector 62, Noida, Delhi NCR - 201309",
-  city: "Noida / Delhi NCR",
+  address: "UGF-7, Parsvnath Bibhab Plaza, Alpha-I Commercial Belt, Block E, Alpha I, Greater Noida, Uttar Pradesh - 201310",
+  shortAddress: "Parsvnath Bibhab Plaza, Alpha-I, Greater Noida",
+  city: "Greater Noida, Delhi NCR",
   state: "Uttar Pradesh & Delhi NCR",
   country: "India",
-  businessHours: "Mon - Sat: 9:30 AM - 7:30 PM | Sun: By Appointment",
+  mapUrl: "https://maps.app.goo.gl/RGYpHD5rE8jEWtjaA",
 
   // Social Media Links (Editable placeholders)
   social: {
@@ -46,9 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (el.tagName === "A") el.href = `tel:${SITE_CONFIG.phoneRaw}`;
   });
 
-  document.querySelectorAll("[data-config='whatsapp']").forEach(el => {
-    el.textContent = SITE_CONFIG.whatsapp;
-    if (el.tagName === "A") el.href = SITE_CONFIG.buildWhatsAppUrl();
+  document.querySelectorAll("[data-config='whatsapp'], [data-config='whatsapp-action']").forEach(el => {
+    if (el.classList.contains("floating-whatsapp-btn") || el.getAttribute("data-config") === "whatsapp-action") {
+      if (el.tagName === "A") el.href = SITE_CONFIG.buildWhatsAppUrl();
+    } else {
+      el.textContent = SITE_CONFIG.whatsapp;
+      if (el.tagName === "A") el.href = SITE_CONFIG.buildWhatsAppUrl();
+    }
   });
 
   document.querySelectorAll("[data-config='email']").forEach(el => {
@@ -56,12 +61,22 @@ document.addEventListener("DOMContentLoaded", () => {
     if (el.tagName === "A") el.href = `mailto:${SITE_CONFIG.email}`;
   });
 
-  document.querySelectorAll("[data-config='address']").forEach(el => {
-    el.textContent = SITE_CONFIG.address;
+  document.querySelectorAll("[data-config='shortAddress']").forEach(el => {
+    el.textContent = SITE_CONFIG.shortAddress;
+    if (el.tagName === "A") {
+      el.href = SITE_CONFIG.mapUrl;
+      el.target = "_blank";
+      el.rel = "noopener";
+    }
   });
 
-  document.querySelectorAll("[data-config='businessHours']").forEach(el => {
-    el.textContent = SITE_CONFIG.businessHours;
+  document.querySelectorAll("[data-config='address']").forEach(el => {
+    el.textContent = SITE_CONFIG.address;
+    if (el.tagName === "A") {
+      el.href = SITE_CONFIG.mapUrl;
+      el.target = "_blank";
+      el.rel = "noopener";
+    }
   });
 
   document.querySelectorAll("[data-config='businessName']").forEach(el => {
